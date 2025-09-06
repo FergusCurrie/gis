@@ -26,6 +26,7 @@ dependencies = [
     "pre-commit>=4.3.0",
     "pyproj>=3.7.1",
     "python-dotenv>=1.1.1",
+    "ruff>=0.12.12",
     "scikit-image>=0.25.2",
     "scikit-learn>=1.7.1",
     "segment-anything-py>=1.0.1",
@@ -50,3 +51,7 @@ test         = "echo hi"                         # a simple command task
 expand-images = "python3 src/gis/main.py --mode expand_imagery"
 push-images = "python3 src/gis/main.py --mode push_imagery"
 pull-labels = "python3 src/gis/main.py --mode pull_labels"
+
+
+[tool.ruff.format]
+indent-style = "tab"
