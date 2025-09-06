@@ -4,6 +4,10 @@ from gis.tile import download_tile
 from gis.config import Config
 import os 
 import numpy as np 
+from gis.label_studio_interface import get_annotations, get_tile2rle, get_tile2mask, create_export_snapshot, save_tiles
+from loguru import logger
+
+import time
 
 config = Config()
 
@@ -40,7 +44,7 @@ def expand_around_tracks():
             for j in range(-EXPANSION_FACTOR, EXPANSION_FACTOR+1, 1):
                 new_coords.append((z, x+i, y+j))
     new_coords = list(set(new_coords))
-    print(f'num new coords = {len(new_coords)}')
+    logger.info(f'num new coords = {len(new_coords)}')
 
     new_count = 0
     for coord in new_coords:
@@ -48,19 +52,29 @@ def expand_around_tracks():
         saved = download_tile(z, x, y)
         if saved:
             new_count += 1
-    print(f'added {new_count} new images')
+    logger.info(f'added {new_count} new images')
 
+
+def pull_labels(project_id=4):
+
+    export = create_export_snapshot(project_id)
+    time.sleep(5)
+    annotations = get_annotations(export_pk=export['id'])
+    tile2rle = get_tile2rle(annotations)
+    tile2mask = get_tile2mask(tile2rle)
+    save_tiles(tile2mask)
+    logger.info(f"Pulled {len(tile2mask)} labels")
 
 
 
 def push_new_imagery():
-    print('This is handled in ui of label studio for now ')
+    logger.info('This is handled in ui of label studio for now ')
 
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--mode', 
-                       choices=['expand_imagery', 'push_imagery', 'evaluate'], 
+                       choices=['expand_imagery', 'push_imagery', 'pull_labels'], 
                        required=True,
                        help='Mode to run')
     
@@ -70,3 +84,5 @@ if __name__ == "__main__":
         expand_around_tracks()
     elif args.mode == 'push_imagery':
         push_new_imagery()
+    elif args.mode == 'pull_labels':
+        pull_labels()
