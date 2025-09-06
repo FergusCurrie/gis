@@ -1,0 +1,40 @@
+[project]
+name = "gis"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "FergusCurrie", email = "fergus.currie@gmail.com" }
+]
+requires-python = ">=3.10"
+dependencies = [
+    "hvplot>=0.12.1",
+    "ipykernel>=6.30.1",
+    "ipython>=8.37.0",
+    "ipywidgets>=8.1.7",
+    "label-studio-sdk>=2.0.5",
+    "matplotlib>=3.10.6",
+    "onnx>=1.19.0",
+    "opencv-python>=4.12.0.88",
+    "poethepoet>=0.37.0",
+    "polars>=1.33.0",
+    "pre-commit>=4.3.0",
+    "python-dotenv>=1.1.1",
+    "segment-anything-py>=1.0.1",
+    "streamlit>=1.49.1",
+    "torch>=2.8.0",
+    "torchvision>=0.23.0",
+    "transformers>=4.56.1",
+]
+
+[project.scripts]
+gis = "gis:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.poe.tasks]
+test         = "echo hi"                         # a simple command task
+expand-images = "python3 src/gis/main.py --mode expand_imagery"
+push-images = "python3 src/gis/main.py --mode push_imagery"
