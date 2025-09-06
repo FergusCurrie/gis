@@ -20,10 +20,14 @@ dependencies = [
     "polars>=1.33.0",
     "pre-commit>=4.3.0",
     "python-dotenv>=1.1.1",
+    "scikit-image>=0.25.2",
+    "scikit-learn>=1.7.1",
     "segment-anything-py>=1.0.1",
+    "segmentation-models-pytorch>=0.5.0",
     "streamlit>=1.49.1",
     "torch>=2.8.0",
     "torchvision>=0.23.0",
+    "tqdm>=4.67.1",
     "transformers>=4.56.1",
 ]
 
