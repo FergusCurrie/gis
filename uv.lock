@@ -808,77 +808,6 @@ wheels = [
 ]
 
 [[package]]
-name = "gis"
-version = "0.1.0"
-source = { editable = "." }
-dependencies = [
-    { name = "accelerate" },
-    { name = "albumentations" },
-    { name = "folium" },
-    { name = "hvplot" },
-    { name = "ipykernel" },
-    { name = "ipython", version = "8.37.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
-    { name = "ipython", version = "9.5.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
-    { name = "ipywidgets" },
-    { name = "label-studio-sdk" },
-    { name = "loguru" },
-    { name = "matplotlib" },
-    { name = "mercantile" },
-    { name = "onnx" },
-    { name = "opencv-python" },
-    { name = "poethepoet" },
-    { name = "polars" },
-    { name = "pre-commit" },
-    { name = "pyproj", version = "3.7.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
-    { name = "pyproj", version = "3.7.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
-    { name = "python-dotenv" },
-    { name = "ruff" },
-    { name = "scikit-image" },
-    { name = "scikit-learn" },
-    { name = "segment-anything-py" },
-    { name = "segmentation-models-pytorch" },
-    { name = "shapely" },
-    { name = "streamlit" },
-    { name = "torch" },
-    { name = "torchvision" },
-    { name = "tqdm" },
-    { name = "transformers" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "accelerate", specifier = ">=1.10.1" },
-    { name = "albumentations", specifier = ">=2.0.8" },
-    { name = "folium", specifier = ">=0.20.0" },
-    { name = "hvplot", specifier = ">=0.12.1" },
-    { name = "ipykernel", specifier = ">=6.30.1" },
-    { name = "ipython", specifier = ">=8.37.0" },
-    { name = "ipywidgets", specifier = ">=8.1.7" },
-    { name = "label-studio-sdk", specifier = ">=2.0.5" },
-    { name = "loguru", specifier = ">=0.7.3" },
-    { name = "matplotlib", specifier = ">=3.10.6" },
-    { name = "mercantile", specifier = ">=1.2.1" },
-    { name = "onnx", specifier = ">=1.19.0" },
-    { name = "opencv-python", specifier = ">=4.12.0.88" },
-    { name = "poethepoet", specifier = ">=0.37.0" },
-    { name = "polars", specifier = ">=1.33.0" },
-    { name = "pre-commit", specifier = ">=4.3.0" },
-    { name = "pyproj", specifier = ">=3.7.1" },
-    { name = "python-dotenv", specifier = ">=1.1.1" },
-    { name = "ruff", specifier = ">=0.12.12" },
-    { name = "scikit-image", specifier = ">=0.25.2" },
-    { name = "scikit-learn", specifier = ">=1.7.1" },
-    { name = "segment-anything-py", specifier = ">=1.0.1" },
-    { name = "segmentation-models-pytorch", specifier = ">=0.5.0" },
-    { name = "shapely", specifier = ">=2.1.1" },
-    { name = "streamlit", specifier = ">=1.49.1" },
-    { name = "torch", specifier = ">=2.8.0" },
-    { name = "torchvision", specifier = ">=0.23.0" },
-    { name = "tqdm", specifier = ">=4.67.1" },
-    { name = "transformers", specifier = ">=4.56.1" },
-]
-
-[[package]]
 name = "gitdb"
 version = "4.0.12"
 source = { registry = "https://pypi.org/simple" }
@@ -4189,6 +4118,77 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/a8/4b/29b4ef32e036bb34e4ab51796dd745cdba7ed47ad142a9f4a1eb8e0c744d/tqdm-4.67.1.tar.gz", hash = "sha256:f8aef9c52c08c13a65f30ea34f4e5aac3fd1a34959879d7e59e63027286627f2", size = 169737 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/d0/30/dc54f88dd4a2b5dc8a0279bdd7270e735851848b762aeb1c1184ed1f6b14/tqdm-4.67.1-py3-none-any.whl", hash = "sha256:26445eca388f82e72884e0d580d5464cd801a3ea01e63e5601bdff9ba6a48de2", size = 78540 },
+]
+
+[[package]]
+name = "track-remote-sensing"
+version = "0.1.0"
+source = { editable = "." }
+dependencies = [
+    { name = "accelerate" },
+    { name = "albumentations" },
+    { name = "folium" },
+    { name = "hvplot" },
+    { name = "ipykernel" },
+    { name = "ipython", version = "8.37.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "ipython", version = "9.5.0", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "ipywidgets" },
+    { name = "label-studio-sdk" },
+    { name = "loguru" },
+    { name = "matplotlib" },
+    { name = "mercantile" },
+    { name = "onnx" },
+    { name = "opencv-python" },
+    { name = "poethepoet" },
+    { name = "polars" },
+    { name = "pre-commit" },
+    { name = "pyproj", version = "3.7.1", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version < '3.11'" },
+    { name = "pyproj", version = "3.7.2", source = { registry = "https://pypi.org/simple" }, marker = "python_full_version >= '3.11'" },
+    { name = "python-dotenv" },
+    { name = "ruff" },
+    { name = "scikit-image" },
+    { name = "scikit-learn" },
+    { name = "segment-anything-py" },
+    { name = "segmentation-models-pytorch" },
+    { name = "shapely" },
+    { name = "streamlit" },
+    { name = "torch" },
+    { name = "torchvision" },
+    { name = "tqdm" },
+    { name = "transformers" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "accelerate", specifier = ">=1.10.1" },
+    { name = "albumentations", specifier = ">=2.0.8" },
+    { name = "folium", specifier = ">=0.20.0" },
+    { name = "hvplot", specifier = ">=0.12.1" },
+    { name = "ipykernel", specifier = ">=6.30.1" },
+    { name = "ipython", specifier = ">=8.37.0" },
+    { name = "ipywidgets", specifier = ">=8.1.7" },
+    { name = "label-studio-sdk", specifier = ">=2.0.5" },
+    { name = "loguru", specifier = ">=0.7.3" },
+    { name = "matplotlib", specifier = ">=3.10.6" },
+    { name = "mercantile", specifier = ">=1.2.1" },
+    { name = "onnx", specifier = ">=1.19.0" },
+    { name = "opencv-python", specifier = ">=4.12.0.88" },
+    { name = "poethepoet", specifier = ">=0.37.0" },
+    { name = "polars", specifier = ">=1.33.0" },
+    { name = "pre-commit", specifier = ">=4.3.0" },
+    { name = "pyproj", specifier = ">=3.7.1" },
+    { name = "python-dotenv", specifier = ">=1.1.1" },
+    { name = "ruff", specifier = ">=0.12.12" },
+    { name = "scikit-image", specifier = ">=0.25.2" },
+    { name = "scikit-learn", specifier = ">=1.7.1" },
+    { name = "segment-anything-py", specifier = ">=1.0.1" },
+    { name = "segmentation-models-pytorch", specifier = ">=0.5.0" },
+    { name = "shapely", specifier = ">=2.1.1" },
+    { name = "streamlit", specifier = ">=1.49.1" },
+    { name = "torch", specifier = ">=2.8.0" },
+    { name = "torchvision", specifier = ">=0.23.0" },
+    { name = "tqdm", specifier = ">=4.67.1" },
+    { name = "transformers", specifier = ">=4.56.1" },
 ]
 
 [[package]]

@@ -1,5 +1,5 @@
 [project]
-name = "gis"
+name = "track_remote_sensing"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -40,7 +40,7 @@ dependencies = [
 ]
 
 [project.scripts]
-gis = "gis:main"
+track_remote_sensing = "track_remote_sensing:main"
 
 [build-system]
 requires = ["hatchling"]
@@ -48,9 +48,9 @@ build-backend = "hatchling.build"
 
 [tool.poe.tasks]
 test         = "echo hi"                         # a simple command task
-expand-images = "python3 src/gis/main.py --mode expand_imagery"
-push-images = "python3 src/gis/main.py --mode push_imagery"
-pull-labels = "python3 src/gis/main.py --mode pull_labels"
+expand-images = "python3 src/track_remote_sensing/main.py --mode expand_imagery"
+push-images = "python3 src/track_remote_sensing/main.py --mode push_imagery"
+pull-labels = "python3 src/track_remote_sensing/main.py --mode pull_labels"
 
 
 [tool.ruff.format]
