@@ -1,4 +1,7 @@
 
+# track remote sensing 
+
+Testing cv models for auotmatic track detection + geometry creation. 
 
 
 - Labelling setup through label studio. 
